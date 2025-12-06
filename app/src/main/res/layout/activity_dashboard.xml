@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Welcome, Student"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- My Profile -->
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:backgroundTint="#2196F3"
+        android:text="👤 My Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- My Courses -->
+    <Button
+        android:id="@+id/btnCourses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="#4CAF50"
+        android:text="📚 My Courses"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- Attendance -->
+    <Button
+        android:id="@+id/btnAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="#FF9800"
+        android:text="🙋🏽‍♂️ Attendance"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- Results -->
+    <Button
+        android:id="@+id/btnResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:backgroundTint="#9C27B0"
+        android:text="🎉 Results"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!--    notice-->
+    <Button
+        android:id="@+id/btnNotice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🪧 Notices"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3949AB"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="#FF0000"
+            android:text="Logout"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

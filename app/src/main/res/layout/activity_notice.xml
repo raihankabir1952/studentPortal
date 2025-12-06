@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📢 Latest Notices"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Notice Card 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="5dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔸 Class Cancelled - CSE 202"
+                android:textSize="18sp"
+                android:textColor="#0D47A1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: 5 Dec 2025"
+                android:textColor="#555555"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <!-- Notice Card 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="5dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔸 Midterm Exam Schedule Published"
+                android:textSize="18sp"
+                android:textColor="#0D47A1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check the department notice board"
+                android:textColor="#555555"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <!-- Notice Card 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="5dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔸 Course Registration Starts from 10 Dec"
+                android:textSize="18sp"
+                android:textColor="#0D47A1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login to the student portal to complete registration"
+                android:textColor="#555555"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

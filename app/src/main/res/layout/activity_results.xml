@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/tvResultsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉 Results"
+            android:textColor="#BF360C"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Course Result 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/course_card"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSE 101 - Introduction to Programming"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#E65100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grade: A"
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Course Result 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/course_card"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSE 202 - Data Structures"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#E65100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grade: B+"
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Course Result 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/course_card"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAT 111 - Calculus I"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#E65100" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grade: A-"
+                android:textSize="16sp"
+                android:textColor="#444444"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Total GPA -->
+        <TextView
+            android:id="@+id/tvTotalGPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total GPA: 3.8"
+            android:textColor="#BF360C"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/login_image"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Portal Title -->
+        <TextView
+            android:id="@+id/tvPortalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Portal"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="35dp" />
+
+        <!-- Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            android:layout_margin="8dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <EditText
+                android:id="@+id/etStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Student Name"
+                android:inputType="text"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="14dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Login"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:backgroundTint="#3949AB"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#3949AB"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Dark Mode Switch -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Dark Mode"
+                    android:textSize="16sp"
+                    android:textColor="#1A237E" />
+
+                <Switch
+                    android:id="@+id/switchTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Footer -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2025 Student Portal"
+            android:textColor="#8A8A8A"
+            android:layout_marginTop="25dp"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

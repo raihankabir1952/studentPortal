@@ -1,6 +1,8 @@
 📘 Student Portal App
 
 Android App Development (Kotlin) – Ongoing Project
+![Status](https://img.shields.io/badge/Project-Ongoing-blue)
+
 
 This is a Student Portal mobile application built using Android Studio (Kotlin).
 The app allows students to log in and view their profile, courses, attendance, and results in a clean and simple UI.

@@ -33,6 +33,7 @@ class DashboardActivity : AppCompatActivity() {
         val btnCourses = findViewById<Button>(R.id.btnCourses)
         val btnAttendance = findViewById<Button>(R.id.btnAttendance)
         val btnResults = findViewById<Button>(R.id.btnResults)
+        val btnRegistration = findViewById<Button>(R.id.btnRegistration)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
         val btnNotice = findViewById<Button>(R.id.btnNotice)
 
@@ -60,6 +61,13 @@ class DashboardActivity : AppCompatActivity() {
         //result part
         btnResults.setOnClickListener {
             val intent = Intent(this, ResultsActivity::class.java)
+            startActivity(intent)
+        }
+
+        //registration part
+        btnRegistration.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            intent.putExtra ("STUDENT_NAME", studentName)
             startActivity(intent)
         }
 

@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         // Dark Mode Switch
-        val switchDarkMode = findViewById<Switch>(R.id.switchTheme) // Make sure ID matches XML
+        val switchDarkMode = findViewById<Switch>(R.id.switchTheme)
         switchDarkMode.isChecked = isDarkMode
 
         switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
@@ -47,18 +47,30 @@ class LoginActivity : AppCompatActivity() {
 
         // Login Button
         val btnLogin = findViewById<Button>(R.id.btnLogin)
-        val etUsername = findViewById<EditText>(R.id.etStudentId) // Make sure ID matches XML
+        val etUsername = findViewById<EditText>(R.id.etStudentId)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
 
         btnLogin.setOnClickListener {
-            val username = etUsername.text.toString()
-            if (username.isNotEmpty()) {
-                val intent = android.content.Intent(this, DashboardActivity::class.java)
-                intent.putExtra("STUDENT_NAME", username)
-                startActivity(intent)
-                finish()
-            } else {
-                etUsername.error = "Enter name"
+
+            val username = etUsername.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            // Validation
+            if (username.isEmpty()) {
+                etUsername.error = "Enter username"
+                return@setOnClickListener
             }
+
+            if (password.isEmpty()) {
+                etPassword.error = "Enter password"
+                return@setOnClickListener
+            }
+
+            // Login success
+            val intent = android.content.Intent(this, DashboardActivity::class.java)
+            intent.putExtra("STUDENT_NAME", username)
+            startActivity(intent)
+            finish()
         }
     }
 }

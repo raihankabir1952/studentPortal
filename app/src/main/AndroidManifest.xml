@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentPortal">
         <activity
+            android:name=".activity_registration"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+        <activity
             android:name=".NoticeActivity"
             android:exported="false" />
         <activity

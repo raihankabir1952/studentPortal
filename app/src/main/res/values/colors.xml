@@ -9,4 +9,6 @@
     <color name="textPrimary">#1A237E</color>
     <color name="textSecondary">#444444</color>
     <color name="buttonBackground">#3949AB</color>
+    <color name="purple_700">#7B1FA2</color>
+    <color name="black">#000000</color>
 </resources>

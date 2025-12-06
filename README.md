@@ -1,7 +1,7 @@
 📘 Student Portal App
 
-Android App Development (Kotlin) – Ongoing Project
-![Status](https://img.shields.io/badge/Project-Ongoing-blue)
+Android App Development (Kotlin) –  ![Status](https://img.shields.io/badge/project-ongoing-red)
+
 
 
 This is a Student Portal mobile application built using Android Studio (Kotlin).
@@ -122,4 +122,7 @@ RecyclerView / CardView
 
 📅 Project Status
 
-This project is ongoing. Work is being updated regularly on GitHub.
+![Status](https://img.shields.io/badge/Project-Ongoing-red) This project is ongoing. Work is being updated regularly on GitHub.
+
+
+

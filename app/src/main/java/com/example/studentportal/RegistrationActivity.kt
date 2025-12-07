@@ -27,7 +27,22 @@ class RegistrationActivity : AppCompatActivity() {
             "CSE 202 - Data Structures",
             "MAT 111 - Calculus I",
             "PHY 101 - Physics I",
-            "ENG 101 - English Composition"
+            "ENG 101 - English Composition",
+            "CSE 102 - Object-Oriented Programming",
+            "CSE 303 - Database Systems",
+            "CSE 404 - Computer Networks",
+            "CSE 505 - Software Engineering",
+            "CSE 606 - Artificial Intelligence",
+            "CSE 707 - Computer Graphics",
+            "CSE 808 - Operating Systems",
+            "CSE 909 - Computer Architecture",
+            "CSE 100 - Web Programming",
+            "CSE 201 - Discrete Mathematics",
+            "CSE 302 - Computer Organization",
+            "CSE 403 - Computer Networks Lab",
+            "CSE 504 - Software Engineering Lab",
+            "CSE 605 - Artificial Intelligence Lab",
+            "CSE 706 - Computer Graphics Lab"
         )
 
         val sharedPrefs = getSharedPreferences("student_courses", MODE_PRIVATE)

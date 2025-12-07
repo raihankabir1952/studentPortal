@@ -21,6 +21,22 @@
             android:textColor="#1A237E"
             android:layout_marginBottom="20dp"/>
 
+        <!-- 🔍 Search Bar -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Search Courses..."
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Course list will dynamically appear here -->
+
+
         <Button
             android:id="@+id/btnOk"
             android:layout_width="match_parent"

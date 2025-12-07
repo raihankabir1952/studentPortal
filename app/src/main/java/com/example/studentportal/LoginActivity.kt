@@ -65,10 +65,9 @@ class LoginActivity : AppCompatActivity() {
                 etPassword.error = "Enter password"
                 return@setOnClickListener
             }
-
-            // Login success
             val intent = android.content.Intent(this, DashboardActivity::class.java)
             intent.putExtra("STUDENT_NAME", username)
+            intent.putExtra("STUDENT_PASSWORD", password) // <-- এই লাইনটি সবচেয়ে গুরুত্বপূর্ণ
             startActivity(intent)
             finish()
         }

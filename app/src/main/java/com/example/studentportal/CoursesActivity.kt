@@ -2,8 +2,8 @@ package com.example.studentportal
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.ColorStateList
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 class CoursesActivity : AppCompatActivity() {
 
     private lateinit var studentName: String
+    private lateinit var studentPassword: String
+    private lateinit var userSpecificKey: String
     private lateinit var courseContainer: LinearLayout
     private lateinit var sharedPrefs: SharedPreferences
 
@@ -20,23 +22,28 @@ class CoursesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_courses)
 
         studentName = intent.getStringExtra("STUDENT_NAME") ?: "Student"
+        studentPassword = intent.getStringExtra("STUDENT_PASSWORD") ?: ""
+
+
+        userSpecificKey = "$studentName|$studentPassword"
+
         courseContainer = findViewById(R.id.courseContainer)
         sharedPrefs = getSharedPreferences("student_courses", MODE_PRIVATE)
 
         loadCourses()
 
-        // Add Course button
         val btnAddCourse = findViewById<Button>(R.id.btnAddCourse)
         btnAddCourse.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             intent.putExtra("STUDENT_NAME", studentName)
+            intent.putExtra("STUDENT_PASSWORD", studentPassword)
             startActivity(intent)
         }
     }
 
     private fun loadCourses() {
         courseContainer.removeAllViews()
-        val courses = sharedPrefs.getStringSet(studentName, setOf())?.toMutableSet() ?: mutableSetOf()
+        val courses = sharedPrefs.getStringSet(userSpecificKey, setOf())?.toMutableSet() ?: mutableSetOf()
 
         if (courses.isEmpty()) {
             val tvEmpty = TextView(this)
@@ -45,7 +52,7 @@ class CoursesActivity : AppCompatActivity() {
             tvEmpty.setTextColor(resources.getColor(R.color.black, theme))
             courseContainer.addView(tvEmpty)
         } else {
-            for (course in courses) {
+            courses.sorted().forEach { course ->
                 addCourseView(course)
             }
         }
@@ -68,13 +75,18 @@ class CoursesActivity : AppCompatActivity() {
 
         val btnDelete = Button(this)
         btnDelete.text = "Delete"
+        btnDelete.backgroundTintList = ColorStateList.valueOf(getColor(R.color.buttonDelete))
+
         btnDelete.setOnClickListener {
-            // Remove course from SharedPreferences
-            val courses = sharedPrefs.getStringSet(studentName, setOf())?.toMutableSet() ?: mutableSetOf()
-            courses.remove(courseName)
-            sharedPrefs.edit().putStringSet(studentName, courses).apply()
-            // Remove from UI
+            val currentCourses = sharedPrefs.getStringSet(userSpecificKey, setOf())?.toMutableSet() ?: mutableSetOf()
+            currentCourses.remove(courseName)
+            sharedPrefs.edit().putStringSet(userSpecificKey, currentCourses).apply()
+
             courseContainer.removeView(layout)
+
+            if (currentCourses.isEmpty()) {
+                loadCourses()
+            }
         }
 
         layout.addView(tvCourse)
@@ -84,6 +96,7 @@ class CoursesActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        loadCourses() // Refresh courses after returning from RegistrationActivity
+        loadCourses()
     }
 }
+
